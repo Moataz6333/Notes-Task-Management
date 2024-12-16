@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FAFAFA;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+color: white;
+}
+
+.header{
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid #C5C5C5;
+    padding: 0px 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    width: 100px;
+padding: 0px 12px;
+}
+.header .headerButtons{
+    display: flex;
+    gap: 25px;
+}
+.header .headerBtn{
+    display: flex;
+    gap: 7px;
+    padding: 8px;
+  
+    border: 1px solid #C5C5C5;
+    border-radius: 29px;
+    align-items: center;
+
+}
+.header .headerBtn img{
+    width: 22px;
+    height: 22px;
+}
+.header .headerBtn  a:last-child{
+    font-weight: 400;
+    color: #4072F3;
+   font-size: 16px;
+   padding-right: 5px;
+}
+@media (max-width:990px) {
+    .header .headerBtn  a:last-child{
+        display: none;
+    }
+    
+}
+.container{
+    width: 90%;
+    margin: 20px auto;
+}
+.container .weekText{
+    font-size: 2rem;
+    text-align: center;
+    color: #4072F3;
+}
+.container table{
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 100%;
+    min-height: 70vh;
+    border-radius: 15px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    transition: 0.3s;
+}
+.container table tr:first-child th{
+   background-color: #4072F3;
+   color: white;
+   padding: 10px;
+   font-size: 20px;
+   
+  
+}
+.container .full-screen tr:nth-child(2) th ,td{
+width: calc(100% / 7);
+padding: 10px;
+border-left: 1px solid white;
+}
+.container table tr{
+    background-color: white;
+    transition: 0.3s;
+}
+.container table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.container table  th{
+     height: 25px;
+     padding: 15px;
+  
+     background-color: #0f2354;
+     color: white;
+
+}
+.container table th, td {
+    border-bottom: 1px solid #ddd;
+    
+  }
+  .container table td{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  
+  }
+.full-screen{
+    display: none;
+}
+.medium-screen th ,td{
+    width: calc(100% / 2);
+}
+.medium-screen{
+    display: none;
+}
+table td input[type="text"]{
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.15rem;
+}
+table td input[type="text"]:focus{
+    border: none;
+    outline: none;
+}
+table td input[type="checkbox"]{
+    height: 90%;
+    width: 10%;
+    margin-right: 0px;
+}
+.fri-tr,.sat-tr,.sun-tr,.mon-tr,.tue-tr,.wed-tr,.thr-tr{
+    display: none;
+    transition: 1s;
+}
+.container table th{
+    cursor: pointer;
+}
+.container table tr .add{
+    width: 50%;
+    /* height: 100%; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #3384ff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.addNote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+   width: fit-content;
+    border: 1px solid #E0E0E0;
+    border-radius: 40px;
+    padding: 18px 25px;
+    gap: 9px;
+    margin: 20px auto;
+    
+
+}
+.addNote:hover{
+    background-color: #ececec;
+}
+.addNote img{
+    width: 25px;
+    height: 25px;
+}
+.addNote a{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #3A7FF3;
+}
+.buttons{
+    display: flex;
+}
+.deleteBtn{
+   
+   justify-self: flex-end;
+  
+    width: 37px;
+    height: 37px;
+    background-color: #F5F5F5;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ .deleteBtn img{
+    width: 15.73px;
+    height: 12.73px;
+}
+.deleteBtn {
+    border: none;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+   
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    
+  
+}
+.result{
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    width: 90%;
+    background-color: white;
+    
+    overflow: hidden;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid blue;
+
+}
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    background: conic-gradient(#00aaff 0% 90%, #ddd 90% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .percentage {
+    position: absolute;
+    font-weight: bold;
+  }
+  .result .content h3.grade span{
+    color: rgb(0, 232, 35);
+    font-size: 25px;
+  }
+  
+  @media (max-width:980px) {
+    .result{
+        flex-direction: column;
+    }
+    .circle{
+        align-self: flex-end;
+    }
+    
+  }
+  .scroll-to-top {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darken the button on hover */
+}
